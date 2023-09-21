@@ -37,15 +37,22 @@ public class Main {
         System.out.println(birthYear);
 
         System.out.println();
-        System.out.println("What is your siblings birth year? ");
+        System.out.println("What is your sibling birth year? ");
         int yearSibling = myObj.nextInt();
 
         int ageDifference = age - (currentYear - yearSibling);
+        double ageDifferenceTimes;
 
         if (ageDifference > 0) {
             System.out.print("You are ");
             System.out.print(ageDifference);
             System.out.println(" years older than your sibling");
+
+            ageDifferenceTimes = (double)age / (currentYear - yearSibling);
+            ageDifferenceTimes = Math.round(ageDifferenceTimes * 100.0) / 100.0;
+            System.out.print("You are ");
+            System.out.print(ageDifferenceTimes);
+            System.out.println(" times older than your sibling");
         }
         if (ageDifference == 0) {
             System.out.print("You are the same age as your sibling");
@@ -55,6 +62,12 @@ public class Main {
             ageDifference = ageDifference * -1;
             System.out.print(ageDifference);
             System.out.println(" years younger than your sibling");
+
+            ageDifferenceTimes = (double)(currentYear - yearSibling) / age;
+            ageDifferenceTimes = Math.round(ageDifferenceTimes * 100.0) / 100.0;
+            System.out.print("You are ");
+            System.out.print(ageDifferenceTimes);
+            System.out.println(" times younger than your sibling");
         }
 
         // Press Shift+F10 or click the green arrow button in the gutter to run the code.
