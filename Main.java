@@ -9,20 +9,6 @@ public class Main {
         // IntelliJ IDEA suggests fixing it.
         System.out.println("Hello and welcome!");
 
-//        //1.2
-//        final int numGrapes = 12;
-//        double weightedAverage = 97.68;
-//        boolean win = false;
-//
-//        System.out.print("How many grapes are there on the grapevine? ");
-//        System.out.println(numGrapes);
-//
-//        System.out.print("What was your weighted average at the end of the school year? ");
-//        System.out.println(weightedAverage);
-//
-//        System.out.print("Did your team win? ");
-//        System.out.println(win);
-
         System.out.println();
         Scanner myObj = new Scanner(System.in);
         System.out.println("How old are you? ");
