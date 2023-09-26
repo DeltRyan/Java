@@ -9,19 +9,8 @@ public class Main {
         // IntelliJ IDEA suggests fixing it.
         System.out.println("Hello and welcome!");
 
-//        //1.2
-//        final int numGrapes = 12;
-//        double weightedAverage = 97.68;
-//        boolean win = false;
-//
-//        System.out.print("How many grapes are there on the grapevine? ");
-//        System.out.println(numGrapes);
-//
-//        System.out.print("What was your weighted average at the end of the school year? ");
-//        System.out.println(weightedAverage);
-//
-//        System.out.print("Did your team win? ");
-//        System.out.println(win);
+        Age test = new Age();
+
 
         System.out.println();
         Scanner myObj = new Scanner(System.in);
@@ -36,40 +25,32 @@ public class Main {
         System.out.println(birthYear);
 
         System.out.println();
-        System.out.println("What is your sibling birth year? ");
+        System.out.println("What is your sibling's birth year? ");
         int yearSibling = myObj.nextInt();
 
         int ageDifference = age - (currentYear - yearSibling);
         double ageDifferenceTimes;
 
-        if (ageDifference > 0) {
-            System.out.print("You are ");
-            System.out.print(ageDifference);
-            System.out.println(" years older than your sibling");
-
+        boolean old = test.older(ageDifference);
+        if (old) {
             ageDifferenceTimes = (double)age / (currentYear - yearSibling);
             ageDifferenceTimes = Math.round(ageDifferenceTimes * 100.0) / 100.0;
             System.out.print("You are ");
             System.out.print(ageDifferenceTimes);
             System.out.println(" times older than your sibling");
         }
-        if (ageDifference == 0) {
-            System.out.print("You are the same age as your sibling");
-        }
-        if (ageDifference < 0) {
-            System.out.print("You are ");
-            ageDifference = ageDifference * -1;
-            System.out.print(ageDifference);
-            System.out.println(" years younger than your sibling");
 
+        if (!old) {
             ageDifferenceTimes = (double)(currentYear - yearSibling) / age;
             ageDifferenceTimes = Math.round(ageDifferenceTimes * 100.0) / 100.0;
             System.out.print("You are ");
             System.out.print(ageDifferenceTimes);
             System.out.println(" times younger than your sibling");
         }
+        test.currentYear();
+        test.birthYear();
 
         // Press Shift+F10 or click the green arrow button in the gutter to run the code.
 
-        }
     }
+}
