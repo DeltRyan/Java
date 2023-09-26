@@ -11,7 +11,6 @@ public class Main {
 
         Age test = new Age();
 
-
         System.out.println();
         Scanner myObj = new Scanner(System.in);
         System.out.println("How old are you? ");
@@ -47,9 +46,6 @@ public class Main {
             System.out.print(ageDifferenceTimes);
             System.out.println(" times younger than your sibling");
         }
-        test.currentYear();
-        test.birthYear();
-
         // Press Shift+F10 or click the green arrow button in the gutter to run the code.
 
     }
