@@ -9,8 +9,6 @@ public class Main {
         // IntelliJ IDEA suggests fixing it.
         System.out.println("Hello and welcome!");
 
-        Age test = new Age();
-
         System.out.println();
         Scanner myObj = new Scanner(System.in);
         System.out.println("How old are you? ");
@@ -27,26 +25,11 @@ public class Main {
         System.out.println("What is your sibling's birth year? ");
         int yearSibling = myObj.nextInt();
 
-        int ageDifference = age - (currentYear - yearSibling);
-        double ageDifferenceTimes;
 
-        boolean old = test.older(ageDifference);
-        if (old) {
-            ageDifferenceTimes = (double)age / (currentYear - yearSibling);
-            ageDifferenceTimes = Math.round(ageDifferenceTimes * 100.0) / 100.0;
-            System.out.print("You are ");
-            System.out.print(ageDifferenceTimes);
-            System.out.println(" times older than your sibling");
-        }
+        Age test = new Age(currentYear, birthYear, yearSibling);
 
-        if (!old) {
-            ageDifferenceTimes = (double)(currentYear - yearSibling) / age;
-            ageDifferenceTimes = Math.round(ageDifferenceTimes * 100.0) / 100.0;
-            System.out.print("You are ");
-            System.out.print(ageDifferenceTimes);
-            System.out.println(" times younger than your sibling");
-        }
+
+
         // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-
     }
 }
