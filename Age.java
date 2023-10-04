@@ -27,11 +27,15 @@ public class Age
 
         new Age(currentYear, birthYear, yearSibling);
     }
-    public Age()
+    public void start (int currentYear, int birthYear, int yearSibling)
+    {
+        new Age(currentYear, birthYear, yearSibling);
+    }
+    public Age ()
     {
         start();
     }
-    public Age(int currentYear, int birthYear, int yearSibling)
+    public Age (int currentYear, int birthYear, int yearSibling)
     {
         int age = currentYear - birthYear;
         int ageSib = currentYear - yearSibling;
@@ -40,7 +44,7 @@ public class Age
         this.yearSibling = yearSibling;
         older(ageDifference, age);
     }
-    public void older(int ageDifference, int age)
+    public void older (int ageDifference, int age)
     {
         double ageDifferenceTimes;
         if (ageDifference > 0)
