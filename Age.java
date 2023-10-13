@@ -44,33 +44,29 @@ public class Age
         this.yearSibling = yearSibling;
         older(ageDifference, age);
     }
-    public void older (int ageDifference, int age)
-    {
+    public void older (int ageDifference, int age) {
         double ageDifferenceTimes;
-        if (ageDifference > 0)
-        {
+        if (ageDifference > 0) {
             System.out.print("You are ");
             System.out.print(ageDifference);
             System.out.println(" years older than your sibling");
 
-            ageDifferenceTimes = (double)age / (currentYear - yearSibling);
+            ageDifferenceTimes = (double) age / (currentYear - yearSibling);
             ageDifferenceTimes = Math.round(ageDifferenceTimes * 100.0) / 100.0;
             System.out.print("You are ");
             System.out.print(ageDifferenceTimes);
             System.out.println(" times older than your sibling");
         }
-        if (ageDifference == 0)
-        {
+        if (ageDifference == 0) {
             System.out.print("You are the same age as your sibling");
         }
-        if (ageDifference < 0)
-        {
+        if (ageDifference < 0) {
             System.out.print("You are ");
             ageDifference = ageDifference * -1;
             System.out.print(ageDifference);
             System.out.println(" years younger than your sibling");
 
-            ageDifferenceTimes = (double)(currentYear - yearSibling) / age;
+            ageDifferenceTimes = (double) (currentYear - yearSibling) / age;
             ageDifferenceTimes = Math.round(ageDifferenceTimes * 100.0) / 100.0;
             System.out.print("You are ");
             System.out.print(ageDifferenceTimes);
