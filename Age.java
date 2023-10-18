@@ -53,9 +53,12 @@ public class Age
 
             ageDifferenceTimes = (double) age / (currentYear - yearSibling);
             ageDifferenceTimes = Math.round(ageDifferenceTimes * 100.0) / 100.0;
-            System.out.print("You are ");
-            System.out.print(ageDifferenceTimes);
-            System.out.println(" times older than your sibling");
+            System.out.println("You are " + ageDifferenceTimes + " times older than your sibling");
+
+            if (ageDifference > 20)
+            {
+                System.out.println("WOW! Your age gap is \"exponential\"!" );
+            }
         }
         if (ageDifference == 0) {
             System.out.print("You are the same age as your sibling");
@@ -68,9 +71,12 @@ public class Age
 
             ageDifferenceTimes = (double) (currentYear - yearSibling) / age;
             ageDifferenceTimes = Math.round(ageDifferenceTimes * 100.0) / 100.0;
-            System.out.print("You are ");
-            System.out.print(ageDifferenceTimes);
-            System.out.println(" times younger than your sibling");
+            System.out.println("You are " + ageDifferenceTimes + " times younger than your sibling");
+
+            if (ageDifference > 20)
+            {
+                System.out.println("WOW! Your age gap is \"exponential\"!" );
+            }
         }
     }
 }
