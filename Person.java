@@ -6,7 +6,6 @@ public class Person {
     private boolean married;
     private int marriedYear;
     private String gender;
-    private String namePartner;
 
     Scanner scan = new Scanner(System.in);
 
